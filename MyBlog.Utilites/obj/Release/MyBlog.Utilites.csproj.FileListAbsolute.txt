@@ -1,0 +1,5 @@
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Utilites\bin\Release\MyBlog.Utilites.dll
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Utilites\bin\Release\MyBlog.Utilites.pdb
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Utilites\obj\Release\MyBlog.Utilites.dll
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Utilites\obj\Release\MyBlog.Utilites.pdb
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Utilites\obj\Release\MyBlog.Utilites.csprojResolveAssemblyReference.cache

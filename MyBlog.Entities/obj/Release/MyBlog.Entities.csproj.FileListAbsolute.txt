@@ -1,0 +1,10 @@
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Entities\bin\Release\MyBlog.Entities.dll.config
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Entities\bin\Release\MyBlog.Entities.dll
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Entities\bin\Release\MyBlog.Entities.pdb
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Entities\bin\Release\EntityFramework.dll
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Entities\bin\Release\EntityFramework.SqlServer.dll
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Entities\bin\Release\EntityFramework.xml
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Entities\bin\Release\EntityFramework.SqlServer.xml
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Entities\obj\Release\MyBlog.Entities.dll
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Entities\obj\Release\MyBlog.Entities.pdb
+E:\DemoStuff\Amazon\MyBlog\MyBlog.Entities\obj\Release\MyBlog.Entities.csprojResolveAssemblyReference.cache

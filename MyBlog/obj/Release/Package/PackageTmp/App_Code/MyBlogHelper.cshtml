@@ -1,0 +1,12 @@
+﻿
+@helper TrimString(string value)
+{
+    if(value.Length>=150)
+    {
+       <span> free!!</span>
+    }
+    else
+    {
+        @Html.Raw(value)
+   }
+}

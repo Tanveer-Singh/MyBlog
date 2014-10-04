@@ -1,0 +1,37 @@
+﻿@using MyBlog.Helpers
+
+@model IEnumerable<MyBlog.Entities.DataModels.PostModel>
+
+@{
+    ViewBag.Title = "CodeMust";
+}
+
+@section metatags
+{
+    <meta name="description" content="@ViewBag.description"/>
+    <meta name="keywords" content="@ViewBag.keywords" />
+
+}
+
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+    <div class="post-preview">
+        @foreach (var item in Model)
+        {
+            <a href="@Url.Action("View", "Home", new { id = @item.PostID })">
+                <h2 class="post-title">@item.Title
+                </h2>
+                <h3 class="post-subtitle">@item.PostHeading
+                </h3>
+            </a>
+            <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>            
+        }
+    </div>
+    <hr>
+
+    <!-- Pager -->
+    <ul class="pager">
+        <li class="next">
+            <a href="#">Older Posts &rarr;</a>
+        </li>
+    </ul>
+</div>

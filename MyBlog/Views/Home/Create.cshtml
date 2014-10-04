@@ -1,0 +1,67 @@
+﻿@model MyBlog.Entities.Posts
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="form-group col-xs-15">
+
+        <div class="form-group col-xs-8">
+            <div class="col-xs-10">
+
+
+                @*                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-sound-5-1"></span></span>
+                    <input type="text" class="form-control" placeholder="Username">
+                </div>*@
+
+                @Html.LabelFor(model => model.PostHeading)
+                <div class="input-group col-xs-12">
+                    <span class="input-group-addon col-lg-3">#</span>
+
+                    @Html.TextBoxFor(model => model.PostHeading, new { @class = "form-control" })
+                </div>
+                @Html.ValidationMessageFor(model => model.PostHeading)
+
+
+                @Html.LabelFor(model => model.SecondaryText)
+                @Html.TextBoxFor(model => model.SecondaryText, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.SecondaryText)
+
+
+                @Html.LabelFor(model => model.Title)
+                @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
+                <div class="form-group has-error">
+                    @Html.ValidationMessageFor(model => model.Title, null, new { @class = "control-label" })
+                </div>
+
+
+                @Html.LabelFor(model => model.PostDescription)
+                @Html.TextAreaFor(model => model.PostDescription, 5, 50, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PostDescription)
+
+                <br />
+                <p>
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

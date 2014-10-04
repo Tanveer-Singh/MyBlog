@@ -1,0 +1,12 @@
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\bin\Release\MyBlog.DataLayer.dll.config
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\bin\Release\MyBlog.DataLayer.dll
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\bin\Release\MyBlog.DataLayer.pdb
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\bin\Release\EntityFramework.dll
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\bin\Release\EntityFramework.SqlServer.dll
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\bin\Release\MyBlog.Entities.dll
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\bin\Release\MyBlog.Entities.pdb
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\bin\Release\EntityFramework.xml
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\bin\Release\EntityFramework.SqlServer.xml
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\obj\Release\MyBlog.DataLayer.csprojResolveAssemblyReference.cache
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\obj\Release\MyBlog.DataLayer.dll
+E:\DemoStuff\Amazon\MyBlog\MyBlog.DataLayer\obj\Release\MyBlog.DataLayer.pdb

@@ -1,0 +1,27 @@
+﻿@model MyBlog.Entities.DataModels.PostModel
+
+@{
+    ViewBag.Title = "View";
+}
+
+<!-- Post Content -->
+<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+    <h2 class="section-heading">@Model.Title</h2>
+
+    <p>@Html.Raw(@Model.PostDescription)</p>
+
+    <blockquote>The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+
+
+    <a href="#">
+        <img class="img-responsive" src="../../img/post-sample-image.jpg" alt="">
+    </a>
+    <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+        <div class="post-heading">
+            <span class="meta">Posted by <a href="#">@Model.UserName</a> on @Model.CreatedDate.ToLongDateString()</span>
+        </div>
+    </div>
+</div>
