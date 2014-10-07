@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -45,8 +46,30 @@ namespace MyBlog.Controllers
 
                 if (ModelState.IsValid)
                 {
-                    dbBlog.Posts.Add(collection);
-                    dbBlog.SaveChanges();
+                    string FolderName = Server.MapPath("~/MyBlogImages/" + collection.Title);
+                    HttpPostedFileBase file = Request.Files[0];
+                    byte[] imageSize = new byte[file.ContentLength];
+                    file.InputStream.Read(imageSize, 0, (int)file.ContentLength);
+                    string image = file.FileName.Split('\\').Last();
+                    int size = file.ContentLength;
+
+                    if (size > 0)
+                    {
+                        if (Directory.Exists(FolderName))
+                        {
+                            file.SaveAs(Path.Combine(FolderName, image.ToString()));
+                        }
+                        else
+                        {
+                            Directory.CreateDirectory(FolderName);
+                            file.SaveAs(Path.Combine(FolderName, image.ToString()));
+                        }
+
+                        //Save image url to database
+                        collection.PostImage = Path.Combine(@"~\MyBlogImages", collection.Title, image.ToString());
+                        dbBlog.Posts.Add(collection);
+                        dbBlog.SaveChanges();
+                    }
                     return RedirectToAction("Index","Home");
  
                 }

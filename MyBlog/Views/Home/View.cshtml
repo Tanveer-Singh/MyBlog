@@ -4,7 +4,7 @@
     ViewBag.Title = "View";
 }
 
-<!-- Post Content -->
+@*<!-- Post Content -->*@
 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
     <h2 class="section-heading">@Model.Title</h2>
@@ -15,7 +15,7 @@
 
 
     <a href="#">
-        <img class="img-responsive" src="../../img/post-sample-image.jpg" alt="">
+        <img class="img-responsive" src=" @(Model.PostImage == null ? @Url.Content("~/img/post-sample-image.jpg") : @Url.Content(Model.PostImage))" alt="">
     </a>
     <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">

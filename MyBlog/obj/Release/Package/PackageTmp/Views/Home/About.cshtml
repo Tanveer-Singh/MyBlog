@@ -2,33 +2,34 @@
     ViewBag.Title = "About";
 }
 
-<hgroup class="title">
-    <h1>@ViewBag.Title.</h1>
-    <h2>@ViewBag.Message</h2>
-</hgroup>
 
-<article>
-    <p>
-        Use this area to provide additional information.
-    </p>
+@section introheader
+    {
+    <header class="intro-header" style="background-image: url('@Url.Content("~/img/about-bg.jpg")')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>About Me</h1>
+                        <hr class="small">
+                        <span class="subheading">This is what I do.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <p>
-        Use this area to provide additional information.
-    </p>
+    }
 
-    <p>
-        Use this area to provide additional information.
-    </p>
-</article>
-
-<aside>
-    <h3>Aside Title</h3>
-    <p>
-        Use this area to provide additional information.
-    </p>
-    <ul>
-        <li>@Html.ActionLink("Home", "Index", "Home")</li>
-        <li>@Html.ActionLink("About", "About", "Home")</li>
-        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-    </ul>
-</aside>
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <p> I'm a programmer,speaker.this blog, its content and opinions are my own. 
+                I blog about technology, code, web.</p>
+            <h3>Background</h3>
+            <p> I'm a software enginner worked as a speaking, writing, consulting.I worked on a bunch of web sites. 
+             </p>
+        </div>
+    </div>
+</div>

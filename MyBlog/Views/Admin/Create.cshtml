@@ -10,11 +10,11 @@
         tinymce.init({
             selector: "textarea",
             plugins: [
-                "advlist autolink lists link image charmap print preview anchor",
+                "advlist autolink lists link charmap print preview anchor",
                 "searchreplace visualblocks code fullscreen",
                 "insertdatetime media contextmenu paste"
             ],
-            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
         });
 </script>
 
@@ -26,7 +26,8 @@
             <h1 class="page-header">Post</h1>
         </div>
         <!-- /.col-lg-12 -->
-        @using (Html.BeginForm())
+        @using (Html.BeginForm("Create", "Admin", FormMethod.Post,
+                    new { enctype = "multipart/form-data" }))
         {
             @Html.AntiForgeryToken()
             @Html.ValidationSummary(true)
@@ -54,6 +55,10 @@
                                             @Html.TextBoxFor(model => model.Title, new { @class = "form-control", placeholder = "Post Tittle" })
                                             @Html.ValidationMessageFor(model => model.Title)
                                             <br />
+                                            Image 
+                                            <input type="file" name="file" id="file" style="width: 100%" class="form-control"  /> 
+                                            <br />
+
                                             @Html.LabelFor(model => model.PostDescription)
                                             @Html.TextAreaFor(model => model.PostDescription, 5, 50, new { @class = "form-control", placeholder = "Post Description" })
                                             @Html.ValidationMessageFor(model => model.PostDescription)

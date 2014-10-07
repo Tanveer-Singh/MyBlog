@@ -109,16 +109,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/31/2014 10:42:02</publishTime>
     </File>
     <File Include="bin/MyBlog.DataLayer.dll">
-      <publishTime>10/01/2014 11:27:26</publishTime>
+      <publishTime>10/07/2014 12:59:59</publishTime>
     </File>
     <File Include="bin/MyBlog.dll">
-      <publishTime>10/01/2014 11:27:27</publishTime>
+      <publishTime>10/07/2014 14:53:33</publishTime>
     </File>
     <File Include="bin/MyBlog.Entities.dll">
-      <publishTime>10/01/2014 11:27:25</publishTime>
+      <publishTime>10/07/2014 12:59:58</publishTime>
     </File>
     <File Include="bin/MyBlog.Utilites.dll">
-      <publishTime>10/01/2014 11:27:25</publishTime>
+      <publishTime>10/07/2014 12:59:58</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>07/31/2014 10:41:58</publishTime>
@@ -400,13 +400,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/09/2014 20:12:22</publishTime>
     </File>
     <File Include="Content/css/bootstrap.css">
-      <publishTime>09/25/2014 02:58:06</publishTime>
+      <publishTime>10/01/2014 15:47:45</publishTime>
     </File>
     <File Include="Content/css/bootstrap.min.css">
       <publishTime>09/25/2014 02:58:06</publishTime>
     </File>
     <File Include="Content/css/clean-blog.css">
-      <publishTime>09/25/2014 02:58:06</publishTime>
+      <publishTime>10/01/2014 15:47:27</publishTime>
     </File>
     <File Include="Content/css/clean-blog.min.css">
       <publishTime>09/25/2014 02:58:06</publishTime>
@@ -1273,7 +1273,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/31/2014 10:41:46</publishTime>
     </File>
     <File Include="Views/Admin/Create.cshtml">
-      <publishTime>09/22/2014 13:24:00</publishTime>
+      <publishTime>10/07/2014 13:41:03</publishTime>
     </File>
     <File Include="Views/Admin/Index.cshtml">
       <publishTime>08/11/2014 15:46:50</publishTime>
@@ -1282,7 +1282,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/11/2014 15:20:36</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
-      <publishTime>07/31/2014 10:41:46</publishTime>
+      <publishTime>10/01/2014 15:36:41</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>07/31/2014 10:41:46</publishTime>
@@ -1291,10 +1291,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/02/2014 16:03:51</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>09/30/2014 15:29:44</publishTime>
+      <publishTime>10/01/2014 13:01:15</publishTime>
     </File>
     <File Include="Views/Home/View.cshtml">
-      <publishTime>10/01/2014 11:26:49</publishTime>
+      <publishTime>10/07/2014 14:53:32</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>09/19/2014 17:07:02</publishTime>
@@ -1306,7 +1306,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/22/2014 13:05:10</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>10/01/2014 11:15:12</publishTime>
+      <publishTime>10/07/2014 14:57:12</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>07/31/2014 10:41:46</publishTime>
