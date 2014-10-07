@@ -38,40 +38,41 @@ namespace MyBlog.Controllers
 
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Create([Bind(Include = "PostHeading,SecondaryText,Title,PostDescription")]Posts collection)
+        public ActionResult Create(HttpPostedFileBase[] file, [Bind(Include = "PostHeading,SecondaryText,Title,PostDescription")]Posts collection)
         {
+            string image = string.Empty;
             try
             {
-                // TODO: Add insert logic here
-
                 if (ModelState.IsValid)
                 {
                     string FolderName = Server.MapPath("~/MyBlogImages/" + collection.Title);
-                    HttpPostedFileBase file = Request.Files[0];
-                    byte[] imageSize = new byte[file.ContentLength];
-                    file.InputStream.Read(imageSize, 0, (int)file.ContentLength);
-                    string image = file.FileName.Split('\\').Last();
-                    int size = file.ContentLength;
-
-                    if (size > 0)
+                    foreach (HttpPostedFileBase item in file)
                     {
-                        if (Directory.Exists(FolderName))
-                        {
-                            file.SaveAs(Path.Combine(FolderName, image.ToString()));
-                        }
-                        else
-                        {
-                            Directory.CreateDirectory(FolderName);
-                            file.SaveAs(Path.Combine(FolderName, image.ToString()));
-                        }
+                        byte[] imageSize = new byte[item.ContentLength];
+                        item.InputStream.Read(imageSize, 0, (int)item.ContentLength);
+                        image = item.FileName.Split('\\').Last();
+                        int size = item.ContentLength;
 
-                        //Save image url to database
-                        collection.PostImage = Path.Combine(@"~\MyBlogImages", collection.Title, image.ToString());
-                        dbBlog.Posts.Add(collection);
-                        dbBlog.SaveChanges();
+                        if (size > 0)
+                        {
+                            if (Directory.Exists(FolderName))
+                            {
+                                item.SaveAs(Path.Combine(FolderName, image.ToString()));
+                            }
+                            else
+                            {
+                                Directory.CreateDirectory(FolderName);
+                                item.SaveAs(Path.Combine(FolderName, image.ToString()));
+                            }
+
+                        }
                     }
-                    return RedirectToAction("Index","Home");
- 
+
+                    //Save image url to database
+                    collection.PostImage = Path.Combine(@"~\MyBlogImages", collection.Title, image.ToString());
+                    dbBlog.Posts.Add(collection);
+                    dbBlog.SaveChanges();
+                    return RedirectToAction("Index", "Home");
                 }
                 return View(collection);
             }

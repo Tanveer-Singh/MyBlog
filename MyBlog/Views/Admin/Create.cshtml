@@ -5,7 +5,7 @@
 }
 @section Scripts
 {
-  <script src="@Url.Content("~/Scripts/tinymce/tinymce.js")"></script>
+    <script src="@Url.Content("~/Scripts/tinymce/tinymce.js")"></script>
     <script type="text/javascript">
         tinymce.init({
             selector: "textarea",
@@ -16,7 +16,7 @@
             ],
             toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent"
         });
-</script>
+    </script>
 
 }
 
@@ -45,7 +45,7 @@
                                         <div class="form-group">
                                             @Html.LabelFor(model => model.PostHeading)
                                             @Html.TextBoxFor(model => model.PostHeading, new { @class = "form-control", placeholder = "Post Heading" })
-                                            @Html.ValidationMessageFor(model => model.PostHeading, null, new {@class="control-label inputWarning" })
+                                            @Html.ValidationMessageFor(model => model.PostHeading, null, new { @class = "control-label inputWarning" })
                                             <br />
                                             @Html.LabelFor(model => model.SecondaryText)
                                             @Html.TextBoxFor(model => model.SecondaryText, new { @class = "form-control", placeholder = "Secondary Text" })
@@ -56,14 +56,17 @@
                                             @Html.ValidationMessageFor(model => model.Title)
                                             <br />
                                             Image 
-                                            <input type="file" name="file" id="file" style="width: 100%" class="form-control"  /> 
+                                            <input type="file" name="file" id="file" style="width: 100%" class="form-control" />
+                                            <br />
+                                                                                        Image 
+                                            <input type="file" name="file" id="file2" style="width: 100%" class="form-control" />
                                             <br />
 
                                             @Html.LabelFor(model => model.PostDescription)
                                             @Html.TextAreaFor(model => model.PostDescription, 5, 50, new { @class = "form-control", placeholder = "Post Description" })
                                             @Html.ValidationMessageFor(model => model.PostDescription)
 
-                                        </div>                                        
+                                        </div>
                                         <button type="submit" value="create" class="btn btn-success">Submit Button</button>
                                     </form>
                                 </div>
